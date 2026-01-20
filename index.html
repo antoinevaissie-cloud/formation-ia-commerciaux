@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formation IA pour Équipes Commerciales | Certifié Qualiopi & CPF</title>
+  <meta name="description" content="Formez vos équipes commerciales à l'IA. Doublez votre pipeline sans doubler vos heures. Formation certifiée Qualiopi, éligible OPCO et CPF.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --text: #1f2937;
+      --text-muted: #6b7280;
+      --background: #ffffff;
+      --background-alt: #f9fafb;
+      --border: #e5e7eb;
+      --success: #10b981;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    header {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: var(--background);
+      z-index: 100;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    .header-cta {
+      background: var(--primary);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+
+    .header-cta:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Certifications banner */
+    .certifications-banner {
+      background: var(--background-alt);
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .certifications-banner .container {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .certification-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .certification-badge .icon {
+      width: 20px;
+      height: 20px;
+      background: var(--success);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 12px;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero .subtitle {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 16px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .hero-cta:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .hero-note {
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Problems */
+    .problems {
+      padding: 80px 0;
+      background: var(--background-alt);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 48px;
+    }
+
+    .problems-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .problem-card {
+      background: var(--background);
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .problem-card .icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .problem-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .problem-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Program */
+    .program {
+      padding: 80px 0;
+    }
+
+    .program-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .program-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .program-list {
+      list-style: none;
+    }
+
+    .program-list li {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .program-list li:last-child {
+      border-bottom: none;
+    }
+
+    .program-list .number {
+      background: var(--primary);
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .program-list h4 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .program-list p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .program-sidebar {
+      background: var(--background-alt);
+      padding: 32px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .program-sidebar h3 {
+      font-size: 1.25rem;
+      margin-bottom: 24px;
+    }
+
+    .program-detail {
+      margin-bottom: 20px;
+    }
+
+    .program-detail .label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .program-detail .value {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    /* Results */
+    .results {
+      padding: 80px 0;
+      background: var(--primary);
+      color: white;
+    }
+
+    .results .section-title {
+      color: white;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      text-align: center;
+    }
+
+    .result-item .number {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .result-item .label {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    /* Funding */
+    .funding {
+      padding: 80px 0;
+      background: var(--background-alt);
+    }
+
+    .funding-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+
+    .funding-card {
+      background: var(--background);
+      padding: 32px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .funding-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .funding-card h3 .badge {
+      background: var(--success);
+      color: white;
+      font-size: 0.7rem;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .funding-card p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .funding-card ul {
+      list-style: none;
+    }
+
+    .funding-card ul li {
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+    }
+
+    .funding-card ul li::before {
+      content: "✓";
+      color: var(--success);
+      font-weight: bold;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .cta-form input {
+      flex: 1;
+      min-width: 250px;
+      padding: 14px 18px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .cta-form input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .cta-form button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .cta-form button:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--text);
+    }
+
+    .footer-certifications {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-certifications span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <a href="/" class="logo">Formation<span>IA</span>.commercial</a>
+      <a href="#contact" class="header-cta">Demander un devis</a>
+    </div>
+  </header>
+
+  <!-- Certifications Banner -->
+  <div class="certifications-banner">
+    <div class="container">
+      <div class="certification-badge">
+        <span class="icon">✓</span>
+        <span><strong>Qualiopi</strong> — Certifié qualité</span>
+      </div>
+      <div class="certification-badge">
+        <span class="icon">✓</span>
+        <span><strong>OPCO</strong> — Prise en charge employeur</span>
+      </div>
+      <div class="certification-badge">
+        <span class="icon">✓</span>
+        <span><strong>CPF</strong> — Éligible Mon Compte Formation</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Formez vos commerciaux à l'IA.<br><span>Doublez votre pipeline.</span></h1>
+      <p class="subtitle">
+        Vos équipes commerciales maîtrisent l'IA en 2 jours. Prospection, qualification, closing — plus efficaces, moins de tâches répétitives.
+      </p>
+      <a href="#contact" class="hero-cta">Réserver une session</a>
+      <p class="hero-note">Formation finançable à 100% via OPCO ou CPF</p>
+    </div>
+  </section>
+
+  <!-- Problems -->
+  <section class="problems">
+    <div class="container">
+      <h2 class="section-title">Vos commerciaux perdent du temps sur...</h2>
+      <div class="problems-grid">
+        <div class="problem-card">
+          <div class="icon">🔍</div>
+          <h3>Recherche de prospects</h3>
+          <p>Des heures à chercher les bons contacts, qualifier les comptes, comprendre les enjeux de chaque prospect.</p>
+        </div>
+        <div class="problem-card">
+          <div class="icon">✉️</div>
+          <h3>Emails de prospection</h3>
+          <p>Rédiger des messages personnalisés qui ne ressemblent pas à du spam — et qui obtiennent des réponses.</p>
+        </div>
+        <div class="problem-card">
+          <div class="icon">📞</div>
+          <h3>Préparation d'appels</h3>
+          <p>Arriver préparé à chaque call avec les bons arguments, les bonnes objections anticipées.</p>
+        </div>
+        <div class="problem-card">
+          <div class="icon">📄</div>
+          <h3>Propositions commerciales</h3>
+          <p>Créer des propositions personnalisées qui répondent exactement aux besoins exprimés.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program -->
+  <section class="program">
+    <div class="container">
+      <h2 class="section-title">Programme de formation</h2>
+      <div class="program-content">
+        <ul class="program-list">
+          <li>
+            <span class="number">1</span>
+            <div>
+              <h4>Fondamentaux de l'IA pour commerciaux</h4>
+              <p>Comprendre ChatGPT, Claude, et les outils IA. Ce qu'ils font bien, leurs limites, comment les utiliser efficacement.</p>
+            </div>
+          </li>
+          <li>
+            <span class="number">2</span>
+            <div>
+              <h4>Prospection augmentée</h4>
+              <p>Recherche de prospects, qualification de comptes, identification des décideurs. Construire des listes qualifiées 10x plus vite.</p>
+            </div>
+          </li>
+          <li>
+            <span class="number">3</span>
+            <div>
+              <h4>Communication commerciale IA</h4>
+              <p>Emails de prospection, messages LinkedIn, séquences de nurturing. Personnalisation à grande échelle.</p>
+            </div>
+          </li>
+          <li>
+            <span class="number">4</span>
+            <div>
+              <h4>Préparation et closing</h4>
+              <p>Briefs avant appels, gestion des objections, propositions commerciales. Arriver préparé à chaque interaction.</p>
+            </div>
+          </li>
+          <li>
+            <span class="number">5</span>
+            <div>
+              <h4>Mise en pratique sur vos cas</h4>
+              <p>Ateliers pratiques sur vos vrais prospects, vos vrais deals. Vous repartez avec des templates opérationnels.</p>
+            </div>
+          </li>
+        </ul>
+        <div class="program-sidebar">
+          <h3>Informations pratiques</h3>
+          <div class="program-detail">
+            <div class="label">Durée</div>
+            <div class="value">2 jours (14 heures)</div>
+          </div>
+          <div class="program-detail">
+            <div class="label">Format</div>
+            <div class="value">Présentiel ou distanciel</div>
+          </div>
+          <div class="program-detail">
+            <div class="label">Participants</div>
+            <div class="value">4 à 12 personnes</div>
+          </div>
+          <div class="program-detail">
+            <div class="label">Prérequis</div>
+            <div class="value">Aucun — débutants bienvenus</div>
+          </div>
+          <div class="program-detail">
+            <div class="label">Matériel fourni</div>
+            <div class="value">Templates, prompts, guide post-formation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="results">
+    <div class="container">
+      <h2 class="section-title">Résultats observés chez nos clients</h2>
+      <div class="results-grid">
+        <div class="result-item">
+          <div class="number">-50%</div>
+          <div class="label">Temps de recherche prospect</div>
+        </div>
+        <div class="result-item">
+          <div class="number">x3</div>
+          <div class="label">Emails envoyés par jour</div>
+        </div>
+        <div class="result-item">
+          <div class="number">+40%</div>
+          <div class="label">Taux de réponse</div>
+        </div>
+        <div class="result-item">
+          <div class="number">2h</div>
+          <div class="label">Gagnées par commercial/jour</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Funding -->
+  <section class="funding">
+    <div class="container">
+      <h2 class="section-title">Formation 100% finançable</h2>
+      <div class="funding-grid">
+        <div class="funding-card">
+          <h3>OPCO <span class="badge">Entreprises</span></h3>
+          <p>Votre OPCO prend en charge tout ou partie de la formation. Nous gérons le dossier administratif pour vous.</p>
+          <ul>
+            <li>Prise en charge jusqu'à 100%</li>
+            <li>Dossier géré par nos soins</li>
+            <li>Compatible plan de formation</li>
+          </ul>
+        </div>
+        <div class="funding-card">
+          <h3>CPF <span class="badge">Individuel</span></h3>
+          <p>Utilisez votre Compte Personnel de Formation. Inscription directe sur moncompteformation.gouv.fr.</p>
+          <ul>
+            <li>Éligible Mon Compte Formation</li>
+            <li>Inscription en ligne simplifiée</li>
+            <li>Sessions inter-entreprises disponibles</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="container">
+      <h2>Prêt à former vos équipes ?</h2>
+      <p>Recevez un devis personnalisé sous 24h. Nous vous accompagnons sur le montage du dossier de financement.</p>
+      <form class="cta-form" action="https://formspree.io/f/yourformid" method="POST">
+        <input type="email" name="email" placeholder="Votre email professionnel" required>
+        <button type="submit">Demander un devis</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 FormationIA.commercial — Organisme de formation certifié Qualiopi</p>
+      <div class="footer-certifications">
+        <span>✓ Qualiopi</span>
+        <span>✓ Éligible OPCO</span>
+        <span>✓ Éligible CPF</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
